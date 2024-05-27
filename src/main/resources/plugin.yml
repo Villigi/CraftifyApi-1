@@ -1,0 +1,4 @@
+name: CraftifyApi
+version: '${project.version}'
+main: de.villigi.craftifyapi.CraftifyApi
+api-version: '1.20'
