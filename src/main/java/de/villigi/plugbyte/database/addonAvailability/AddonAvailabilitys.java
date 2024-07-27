@@ -1,4 +1,4 @@
-package de.villigi.craftifyapi.database.addonAvailability;
+package de.villigi.plugbyte.database.addonAvailability;
 
 public enum AddonAvailabilitys {
 

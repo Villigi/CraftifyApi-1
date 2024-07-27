@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/CraftifyApi.iml" filepath="$PROJECT_DIR$/CraftifyApi.iml" />
+      <module fileurl="file://$PROJECT_DIR$/PlugByteApi.iml" filepath="$PROJECT_DIR$/PlugByteApi.iml" />
     </modules>
   </component>
 </project>

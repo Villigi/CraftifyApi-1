@@ -6,8 +6,12 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="CraftifyApi" />
+        <module name="PlugByteApi" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="CraftifyApi" target="1.8" />
+      <module name="PlugbyteApi" target="1.8" />
+    </bytecodeTargetLevel>
   </component>
 </project>

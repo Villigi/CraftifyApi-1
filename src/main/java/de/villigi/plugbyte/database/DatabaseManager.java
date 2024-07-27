@@ -1,6 +1,6 @@
-package de.villigi.craftifyapi.database;
+package de.villigi.plugbyte.database;
 
-import de.villigi.craftifyapi.CraftifyApi;
+import de.villigi.plugbyte.PlugByteApi;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.configuration.file.YamlConfiguration;
 
@@ -33,15 +33,16 @@ public class DatabaseManager {
                 username,
                 password);
         connection.createStatement().executeUpdate("CREATE TABLE IF NOT EXISTS `addon_availability`(`Addon` VARCHAR(255), `Availability` VARCHAR(255));");
+        connection.createStatement().executeUpdate("CREATE TABLE IF NOT EXISTS `messages`(`Placeholder` VARCHAR(255), `Message` VARCHAR(255));");
     }
 
 
     public void loadFiles() {
-        if(!CraftifyApi.getInstance().getDataFolder().exists()) {
-            CraftifyApi.getInstance().getDataFolder().mkdirs();
+        if(!PlugByteApi.getInstance().getDataFolder().exists()) {
+            PlugByteApi.getInstance().getDataFolder().mkdirs();
         }
 
-        sql_file = new File(CraftifyApi.getInstance().getDataFolder(), "mysql.yml");
+        sql_file = new File(PlugByteApi.getInstance().getDataFolder(), "mysql.yml");
 
         if(!sql_file.exists()) {
             try {
