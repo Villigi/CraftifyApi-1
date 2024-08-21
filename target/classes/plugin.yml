@@ -1,0 +1,3 @@
+name: PlugByteApi
+version: '1.0-SNAPSHOT'
+main: de.villigi.plugbyte.PlugByteApi

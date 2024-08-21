@@ -14,6 +14,7 @@ public final class PlugByteApi extends JavaPlugin {
     public static String prefix = " ";
 
 
+
     @Override
     public void onEnable() {
         instance = this;

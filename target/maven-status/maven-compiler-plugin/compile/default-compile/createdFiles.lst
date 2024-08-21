@@ -1,0 +1,9 @@
+de/villigi/plugbyte/api/InventoryApi.class
+de/villigi/plugbyte/api/MessageApi.class
+de/villigi/plugbyte/database/DatabaseManager.class
+de/villigi/plugbyte/api/LanguageApi.class
+de/villigi/plugbyte/database/addonAvailability/AddonAvailabilitys.class
+de/villigi/plugbyte/PlugByteApi.class
+de/villigi/plugbyte/commands/SettingsCMD.class
+de/villigi/plugbyte/api/AddonApi.class
+de/villigi/plugbyte/api/MysqlApi.class

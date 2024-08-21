@@ -1,11 +1,14 @@
 package de.villigi.plugbyte.api;
 
 import de.villigi.plugbyte.PlugByteApi;
+import org.apache.logging.log4j.message.Message;
 
+import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 
 public class MessageApi {
@@ -42,17 +45,17 @@ public class MessageApi {
     }
 
 
-    public List<Message> getMessages() throws SQLException {
-        List<Message> messages = new ArrayList<>();
+    public static HashMap<String, String> getMessages() throws SQLException {
+        HashMap<String, String> messages = new HashMap<>();
         String sql = "SELECT Placeholder, Message FROM messages";
-        Connection connection = database.getConnection();
+        Connection connection = PlugByteApi.getInstance().getDatabaseManager().getConnection();
         PreparedStatement statement = connection.prepareStatement(sql);
         ResultSet resultSet = statement.executeQuery();
 
         while (resultSet.next()) {
             String placeholder = resultSet.getString("Placeholder");
             String message = resultSet.getString("Message");
-            messages.add(new Message(placeholder, message));
+            messages.put(placeholder, message);
         }
 
         resultSet.close();
@@ -60,6 +63,7 @@ public class MessageApi {
 
         return messages;
     }
+
 
     public void changeMessage(String message) {
         try {
